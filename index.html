@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>How Claude Was Used</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,7 +12,37 @@
         <a href="NASA.html">NASA APOD</a>
     </nav>
     <main>
-        <h1 id="hello">Hello World</h1>
+        <h1>How Claude Was Used</h1>
+
+        <section>
+            <h2>Code Generation and Organization</h2>
+            <p>Claude generated all the HTML, CSS, and JavaScript for this project from scratch. It also refactored the code by extracting inline styles into a shared <code>styles.css</code> file, keeping both pages consistent and easier to maintain.</p>
+        </section>
+
+        <section>
+            <h2>Launch on Localhost</h2>
+            <p>Claude provided the command to serve the site locally using Python's built-in HTTP server (<code>python3 -m http.server 8000</code>) and diagnosed why the directory listing was appearing instead of the page — the server was being run from the wrong directory.</p>
+        </section>
+
+        <section>
+            <h2>APOD API</h2>
+            <p>Claude built the NASA Astronomy Picture of the Day page, including fetching data from NASA's public API, handling both image and video media types, and displaying the title, date, and description dynamically.</p>
+        </section>
+
+        <section>
+            <h2>HTML Responsive Web Design</h2>
+            <p>Claude audited the site for mobile compatibility, identified issues with fixed video height, oversized fonts, and tight padding on small screens, then added CSS media queries to make the site look good on phones and all screen sizes.</p>
+        </section>
+
+        <section>
+            <h2>Connection to GitHub and GitHub Pages</h2>
+            <p>Claude checked whether Git and the GitHub CLI were installed, walked through initializing a git repository, connecting it to a remote GitHub repo, and pushing the code. It also provided instructions to enable GitHub Pages for free hosting.</p>
+        </section>
+
+        <footer>
+            <h2>Estimated Time Saved</h2>
+            <p>Building this project manually — writing the HTML, CSS, and JavaScript, debugging the localhost issue, integrating the NASA API, making the site responsive, and setting up GitHub — would typically take a developer <strong>3–5 hours</strong>. With Claude, it was done in a single conversation in under <strong>30 minutes</strong>, saving an estimated <strong>3–4.5 hours</strong> of work.</p>
+        </footer>
     </main>
 </body>
 </html>

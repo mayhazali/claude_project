@@ -98,6 +98,41 @@ h2 {
     font-size: 3rem;
 }
 
+section, footer {
+    margin-bottom: 2rem;
+    border-left: 3px solid #aad4f5;
+    padding-left: 1rem;
+}
+
+section h2, footer h2 {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #aad4f5;
+    margin-bottom: 0.5rem;
+}
+
+section p, footer p {
+    color: #ccc;
+    line-height: 1.7;
+}
+
+code {
+    background-color: #1a1a1a;
+    color: #aad4f5;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+footer {
+    margin-top: 3rem;
+    border-left-color: #fff;
+}
+
+footer h2 {
+    color: #fff;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     main {
@@ -110,11 +145,6 @@ h2 {
 
     h2 {
         font-size: 1.3rem;
-    }
-
-    #hello {
-        font-size: 2rem;
-        margin-top: 2rem;
     }
 
     #apod-video {
