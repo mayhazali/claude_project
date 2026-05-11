@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Astronomy Picture of the Day</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="NASA.html" class="active">NASA APOD</a>
+    </nav>
+    <main>
+        <h1>NASA Astronomy Picture of the Day</h1>
+        <p id="date"></p>
+        <h2 id="title"></h2>
+        <div id="media-container"></div>
+        <p id="explanation"></p>
+        <p id="error"></p>
+    </main>
+
+    <script>
+        const API_KEY = 'DEMO_KEY';
+
+        fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+            .then(res => {
+                if (!res.ok) throw new Error(`API error: ${res.status}`);
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('date').textContent = data.date;
+                document.getElementById('title').textContent = data.title;
+                document.getElementById('explanation').textContent = data.explanation;
+
+                const container = document.getElementById('media-container');
+                if (data.media_type === 'video') {
+                    const iframe = document.createElement('iframe');
+                    iframe.id = 'apod-video';
+                    iframe.src = data.url;
+                    iframe.allowFullscreen = true;
+                    container.appendChild(iframe);
+                } else {
+                    const img = document.createElement('img');
+                    img.id = 'apod-image';
+                    img.src = data.hdurl || data.url;
+                    img.alt = data.title;
+                    container.appendChild(img);
+                }
+            })
+            .catch(err => {
+                document.getElementById('error').textContent = `Failed to load: ${err.message}`;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* Shared styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Georgia, serif;
+}
+
+/* Navigation */
+nav {
+    background-color: #111;
+    border-bottom: 1px solid #333;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #aad4f5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Page content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #aad4f5;
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* NASA page */
+#date {
+    text-align: center;
+    color: #888;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+#media-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#apod-image {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+#apod-video {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 6px;
+}
+
+#explanation {
+    line-height: 1.7;
+    color: #ccc;
+}
+
+#error {
+    color: #f66;
+    text-align: center;
+}
+
+/* Home page */
+#hello {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+}
