@@ -98,6 +98,18 @@ h2 {
     font-size: 3rem;
 }
 
+/* Hero image */
+#hero {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+#hero-image {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+
 section, footer {
     margin-bottom: 2rem;
     border-left: 3px solid #aad4f5;
